@@ -1,0 +1,11 @@
+actor: ApiTestTester
+step_decorators:
+    - \Codeception\Step\AsJson
+suite_namespace: Tests\ApiTest
+modules:
+    # enable helpers as array
+   enabled:
+        - REST:
+            url: https://simple-books-api.glitch.me
+            depends: PhpBrowser
+            part: Json
